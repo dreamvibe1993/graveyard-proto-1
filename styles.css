@@ -1,0 +1,104 @@
+body {
+  background-color: #101010;
+  color: yellow;
+  font-family: "Courier New", Courier, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.invisible {
+  opacity: 0;
+  display: none !important;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(64, auto);
+  grid-template-rows: repeat(64, auto);
+  gap: 5px;
+  width: 100%;
+  justify-content: space-between;
+  /* background-color: grey; */
+}
+
+.grid-cell {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.grid-cell.yellow {
+    cursor: pointer;
+}
+
+.grave-id-form {
+  position: fixed;
+  background-color: #101010;
+  padding: 15px;
+  top: 0;
+  left: 0;
+  border: 1px solid yellow;
+  border-radius: 1px;
+  opacity: 0.5;
+  transition: all 0.2s linear;
+}
+
+.grave-id-form:hover {
+  opacity: 1;
+}
+
+.grave-id-form input {
+  background-color: inherit;
+  border: none;
+  padding: 5px;
+  color: yellow;
+}
+
+.grave-id-form input::placeholder {
+  color: rgba(255, 255, 0, 0.603);
+}
+
+.grave-id-form input:focus {
+  outline: none;
+}
+
+.grave-id-form button {
+  border: none;
+  background-color: yellow;
+  color: #101010;
+  padding: 5px 10px;
+}
+
+.burial-sheet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 512px;
+  height: 512px;
+  background-color: #101010;
+  border: 1px solid yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: opacity 0.1s linear;
+}
+
+.burial-sheet .close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
