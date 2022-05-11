@@ -9,6 +9,14 @@ body {
   box-sizing: border-box;
 }
 
+button {
+  border: none;
+  background-color: yellow;
+  color: #101010;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
 .invisible {
   opacity: 0;
   display: none !important;
@@ -39,7 +47,7 @@ body {
 }
 
 .grid-cell.yellow {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .grave-id-form {
@@ -51,7 +59,7 @@ body {
   border: 1px solid yellow;
   border-radius: 1px;
   opacity: 0.5;
-  transition: all 0.2s linear;
+  transition: opacity 0.2s linear;
 }
 
 .grave-id-form:hover {
@@ -71,13 +79,6 @@ body {
 
 .grave-id-form input:focus {
   outline: none;
-}
-
-.grave-id-form button {
-  border: none;
-  background-color: yellow;
-  color: #101010;
-  padding: 5px 10px;
 }
 
 .burial-sheet {
@@ -101,4 +102,12 @@ body {
   right: 5px;
   top: 5px;
   cursor: pointer;
+}
+
+.mysterious-button-container {
+  position: fixed;
+  padding: 15px;
+  bottom: 0;
+  right: 0;
+  background-color: #101010;
 }
